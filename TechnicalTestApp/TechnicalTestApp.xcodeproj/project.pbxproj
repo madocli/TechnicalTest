@@ -12,6 +12,9 @@
 		2A85B75B21EE64D400E8F0E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A85B75921EE64D400E8F0E7 /* Main.storyboard */; };
 		2A85B75D21EE64D500E8F0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A85B75C21EE64D500E8F0E7 /* Assets.xcassets */; };
 		2A85B76021EE64D500E8F0E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A85B75E21EE64D500E8F0E7 /* LaunchScreen.storyboard */; };
+		2A85B76D21EE662A00E8F0E7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85B76C21EE662A00E8F0E7 /* Account.swift */; };
+		2A85B76F21EE97A800E8F0E7 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85B76E21EE97A800E8F0E7 /* AccountModel.swift */; };
+		2A85B77121EE97E200E8F0E7 /* AccountModel+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85B77021EE97E200E8F0E7 /* AccountModel+TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		2A85B75C21EE64D500E8F0E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A85B75F21EE64D500E8F0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A85B76121EE64D500E8F0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A85B76C21EE662A00E8F0E7 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		2A85B76E21EE97A800E8F0E7 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		2A85B77021EE97E200E8F0E7 /* AccountModel+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountModel+TestData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,9 @@
 		2A85B76721EE651A00E8F0E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A85B76C21EE662A00E8F0E7 /* Account.swift */,
+				2A85B76E21EE97A800E8F0E7 /* AccountModel.swift */,
+				2A85B77021EE97E200E8F0E7 /* AccountModel+TestData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +186,9 @@
 			files = (
 				2A85B75821EE64D400E8F0E7 /* ViewController.swift in Sources */,
 				2A85B75621EE64D400E8F0E7 /* AppDelegate.swift in Sources */,
+				2A85B76D21EE662A00E8F0E7 /* Account.swift in Sources */,
+				2A85B76F21EE97A800E8F0E7 /* AccountModel.swift in Sources */,
+				2A85B77121EE97E200E8F0E7 /* AccountModel+TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

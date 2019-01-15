@@ -9,7 +9,11 @@
 import UIKit
 
 class AccountTableViewCell: UITableViewCell {
-
+    static let ID = "AccountTableViewCell"
+    @IBOutlet weak var accountNameLbl: UILabel!
+    @IBOutlet weak var amountLbl: UILabel!
+    @IBOutlet weak var ibanLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,14 +29,14 @@ class AccountTableViewCell: UITableViewCell {
 
 extension AccountTableViewCell: AccountView {
     func set(name: String) {
-        // TODO
+        accountNameLbl.text = name
     }
     
     func set(amount: Double, currency: String) {
-        // TODO
+        amountLbl.text = "\(amount),00 \(currency)"
     }
     
     func set(iban: String) {
-        // TODO
+        ibanLbl.text = iban
     }
 }

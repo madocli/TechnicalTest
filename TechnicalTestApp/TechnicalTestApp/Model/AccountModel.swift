@@ -13,6 +13,9 @@ struct AccountModel {
     var failedAccountTypes: String?
     var returnCode: String?
     
+    init() {
+    }
+    
     init(dictionary: NSDictionary) {
         // TODO: get [nsDictionary]
         self.accounts = dictionary["accounts"] as? [Account]

@@ -10,7 +10,6 @@ import Foundation
 
 protocol AccountListViewInterface: class {
     func reloadData()
-    func set(visible: Bool)
 }
 
 protocol AccountView: class {

@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    var presenter: AccountListPreseter!
 
+    // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Switch", style: .plain, target: self, action: #selector(switchVisibleAccounts(_:)))
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +28,27 @@ class ViewController: UIViewController {
     }
 
 
+    @objc
+    func switchVisibleAccounts(_ sender: Any) {
+        presenter.setVisible()
+    }
 }
 
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.numberOfAccounts
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        return cell
+    }
+    
+    
+}
+
+extension ViewController: AccountListViewInterface {
+    func reloadData() {
+        // TODO
+    }
+}

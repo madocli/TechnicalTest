@@ -33,7 +33,7 @@ extension AccountTableViewCell: AccountView {
     }
     
     func set(amount: Double, currency: String) {
-        amountLbl.text = "\(amount),00 \(currency)"
+        amountLbl.text = "\(amount) \(currency)"
     }
     
     func set(iban: String) {

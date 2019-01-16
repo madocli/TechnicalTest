@@ -14,7 +14,7 @@ class AccountListPreseter {
     private weak var view: AccountListViewInterface?
     private var arrayAccounts = [Account]()
     private var setVisibleAccounts = false
-    private var initData = AccountModel()
+    var initData = AccountModel()
     
     var numberOfAccounts: Int {
         return arrayAccounts.count
@@ -26,7 +26,11 @@ class AccountListPreseter {
     }
     
     func viewReady() {
-        // TODO: get data to represent
+        if let accounts = initData.accounts {
+            arrayAccounts = accounts
+        }
+        view?.reloadData()
+        view?.set(visible: setVisibleAccounts)
     }
     
     func setVisible() {
@@ -44,9 +48,9 @@ class AccountListPreseter {
     func set(cell: AccountView, forRow: Int) {
         if forRow < numberOfAccounts {
             let account = arrayAccounts[forRow]
-            cell.set(name: account.accountName ?? "")
+            cell.set(name: account.accountName ?? account.productName ?? "")
             cell.set(amount: account.accountBalanceInCents ?? 0.0, currency: account.accountCurrency ?? "€")
-            cell.set(iban: account.iban ?? "")
+            cell.set(iban: account.iban ?? account.productName ?? "")
         }
     }
 }

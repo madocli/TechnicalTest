@@ -16,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setUpViewController()
         return true
+    }
+    
+    private func getData() -> AccountModel {
+        let dictionary = TestData.convertToDictionary(text: TestData.accountModel) ?? NSDictionary()
+        let accountModel = AccountModel.init(dictionary: dictionary)
+        return accountModel
+    }
+    
+    private func setUpViewController() {
+        let navigationController = self.window!.rootViewController as! UINavigationController
+        let controller = navigationController.topViewController as! ViewController
+        let presenter = AccountListPreseter(viewController: controller)
+        presenter.initData = getData()
+        controller.presenter =  presenter
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
